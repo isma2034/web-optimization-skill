@@ -19,16 +19,16 @@ git clone https://github.com/isma2034/web-optimization-skill.git
 cd web-optimization-skill
 
 # Audit a few pages
-./scripts/technical_audit.sh https://example.com / /contact /services
+bash scripts/technical_audit.sh https://example.com / /contact /services
 
 # Crawl every page listed in the sitemap (sitemap indexes are resolved)
-./scripts/technical_audit.sh https://example.com --sitemap --delay 2
+bash scripts/technical_audit.sh https://example.com --sitemap --delay 2
 
 # Structured output (needs jq)
-./scripts/technical_audit.sh https://example.com / --json
+bash scripts/technical_audit.sh https://example.com / --json
 ```
 
-Prefer no flags? `./scripts/audit_guide.sh` asks for the site address, picks a
+Prefer no flags? `bash scripts/audit_guide.sh` asks for the site address, picks a
 safe delay and writes a plain-language summary (`resume.txt`) and `donnees.json`
 to `~/Audits-Web/<domain>/<date>/`. Its messages are in French.
 

@@ -37,7 +37,7 @@ A false CONFIRMED claim is far worse than an honest "still checking".
 ### 1. Gather raw evidence — read the source, don't eyeball the rendered page
 
 ```bash
-scripts/technical_audit.sh https://example.com / /contact /services
+bash scripts/technical_audit.sh https://example.com / /contact /services
 ```
 
 Pass every important path (home, contact, key service pages, one blog post).
