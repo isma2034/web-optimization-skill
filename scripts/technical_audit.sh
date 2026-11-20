@@ -518,7 +518,7 @@ for sm in "sitemap.xml" "sitemap_index.xml" "sitemap-index.xml"; do
   if [ "$code" = "200" ]; then
     sm_body=$(fetch_body_with_retry "$BASE/$sm")
     say "$(echo "$sm_body" | grep -o '<loc>[^<]*</loc>' | head -n 20)"
-    loc_count=$(echo "$sm_body" | grep -c '<loc>')
+    loc_count=$(echo "$sm_body" | grep -o '<loc>' | wc -l | tr -d ' ')
     say "... ($loc_count <loc> entries total, first 20 shown)"
   fi
   if [ "$JSON_MODE" -eq 1 ]; then
